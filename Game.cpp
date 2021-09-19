@@ -71,7 +71,7 @@ void Game::exploreMenu(){
                 playMenu();
                 break;
             case 1: {
-                fight.Battle();
+                character.Battle();
                 character.gainExp(10);
                 getItem();
                 break;

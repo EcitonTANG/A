@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/AP/A/Character.cpp
+Character.h
+C:/AP/A/Character.h
+
 C:/AP/A/Character.h
 iostream
 -
@@ -13,16 +17,6 @@ string
 -
 Item.h
 C:/AP/A/Item.h
-
-C:/AP/A/Fight.cpp
-iostream
--
-Fight.h
-C:/AP/A/Fight.h
-
-C:/AP/A/Fight.h
-Character.h
-C:/AP/A/Character.h
 
 C:/AP/A/Item.h
 iostream

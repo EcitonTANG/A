@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include "Fight.h"
 
 using namespace std;
@@ -74,4 +74,4 @@ int Fight::showHp(int hp, int enemyattack)
 {
     hp = character.getHP() - enemyattack;
     return hp;
-}
+}*/

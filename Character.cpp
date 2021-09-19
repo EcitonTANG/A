@@ -11,9 +11,9 @@ Character::Character() {
 
 void Character::initialize(string name){
     this->name = name;//keyword "this", helps to override variables with same naming;
-    HP = 10;
+    HP = 20;
     maxHP = 10;
-    atk = 2;
+    atk = 5;
     exp = 0;
     level = 1;
 
@@ -61,4 +61,75 @@ const Item &Character::getItem() const {
 
 void Character::setItem(const Item &item) {
     Character::item = item;
+}
+
+void Character::Battle()
+{
+    int battle;
+    cout << "\nYou see an enemy in the distance. Attack enemy?\n Yes = 1\n No = 2\n";
+    cin >> battle;
+    if(battle==1)
+    {
+        enemyBattle();
+    }
+    else if(battle==2)
+    {
+        cout << "You chose to not attack the enemy.\n";
+    }
+    else
+    {
+        cout << "That is not a valid choice.\n\n";
+        return Battle();
+    }
+
+}
+
+void Character::enemyBattle() {
+    int enemyhp = 15, enemyattack = 5;
+    int hitGoblin;
+
+    do {
+        cout << "\nHit enemy?\n Yes = 1\n No = 2\n";
+        cin >> hitGoblin;
+        if (hitGoblin == 1)
+        {
+            enemyhp = showEnemyHp(enemyhp);
+            HP = showHp(enemyattack);
+            cout << "\nYou hit the enemy.\n";
+            cout << "The enemy now has " << enemyhp << "HP left.\n\n";
+            if(enemyhp <= 0)
+            {
+                cout << "You won!\n";
+            }
+            else if(enemyhp > 0)
+            {
+                cout << "The enemy hit you back.\n";
+                cout << "You now have " << HP << "HP left.\n\n";
+            }
+        }
+        else if(hitGoblin == 2)
+        {
+            HP = showHp(enemyattack);
+            cout << "You chose not to hit the enemy so he hit you instead\n";
+            cout << "You now have " << HP << "HP left.\n\n";
+        }
+        else
+        {
+            cout << "That is not a valid choice.\n\n";
+            return enemyBattle();
+        }
+
+    }while(HP > 0 && enemyhp > 0);
+}
+
+int Character::showEnemyHp(int enemyhp)
+{
+    enemyhp = enemyhp - atk;
+    return enemyhp;
+}
+
+int Character::showHp(int enemyattack)
+{
+    HP = HP - enemyattack;
+    return HP;
 }

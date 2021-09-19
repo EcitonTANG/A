@@ -1,4 +1,4 @@
-#ifndef IT_2003_2004_L1_FIGHT_H
+/*#ifndef IT_2003_2004_L1_FIGHT_H
 #define IT_2003_2004_L1_FIGHT_H
 
 #include "Character.h"
@@ -7,7 +7,7 @@ class Fight {
 public:
     int Battle();
     void enemyBattle();
-    int showHp(int HP, int enemyattack;
+    int showHp(int HP, int enemyattack);
     int showEnemyHp(int enemyhp, int attack);
 
 private:
@@ -15,4 +15,4 @@ private:
 };
 
 
-#endif //IT_2003_2004_L1_FIGHT_H
+#endif //IT_2003_2004_L1_FIGHT_H*/

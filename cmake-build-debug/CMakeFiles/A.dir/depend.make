@@ -12,7 +12,6 @@ CMakeFiles/A.dir/Fight.cpp.obj: \
  ../Item.h
 CMakeFiles/A.dir/Game.cpp.obj: \
  ../Character.h \
- ../Fight.h \
  ../Game.cpp \
  ../Game.h \
  ../Item.h
@@ -21,7 +20,6 @@ CMakeFiles/A.dir/Item.cpp.obj: \
  ../Item.h
 CMakeFiles/A.dir/main.cpp.obj: \
  ../Character.h \
- ../Fight.h \
  ../Game.h \
  ../Item.h \
  ../main.cpp

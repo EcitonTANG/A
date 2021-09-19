@@ -2,7 +2,7 @@
 using namespace std;
 #include <string>
 #include "Character.h"
-#include "Fight.h"
+//#include "Fight.h"
 
 #ifndef IT_2003_2004_L1_GAME_H
 #define IT_2003_2004_L1_GAME_H
@@ -20,7 +20,7 @@ private:
     int option; //choice of player
     bool playing; //if player is playing game?
     Character character;
-    Fight fight;
+    //Fight fight;
 
 
     void showStats();

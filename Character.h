@@ -13,6 +13,10 @@ public:
     int getHP();
     int getAtk();
     string showStats();
+    void Battle();
+    void enemyBattle();
+    int showEnemyHp(int enemyhp);
+    int showHp(int enemyattack);
 
     const Item &getItem() const;
 

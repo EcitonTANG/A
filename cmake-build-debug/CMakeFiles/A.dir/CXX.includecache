@@ -6,14 +6,12 @@
 
 #IncludeRegexTransform: 
 
-C:/AP/A/Character.cpp
-Character.h
-C:/AP/A/Character.h
-
 C:/AP/A/Character.h
 iostream
 -
 string
+-
+ctime
 -
 Item.h
 C:/AP/A/Item.h

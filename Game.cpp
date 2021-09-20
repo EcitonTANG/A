@@ -78,7 +78,7 @@ void Game::exploreMenu(){
             }
             case 2:
                 character.rest();
-                cout<<"You have rested"<<endl;
+                cout<<character.thought()<<endl;
             default:
                 break;
 

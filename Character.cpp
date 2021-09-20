@@ -12,7 +12,7 @@ Character::Character() {
 void Character::initialize(string name){
     this->name = name;//keyword "this", helps to override variables with same naming;
     HP = 20;
-    maxHP = 10;
+    maxHP = 20;
     atk = 5;
     exp = 0;
     level = 1;
@@ -138,3 +138,22 @@ int Character::rest() {
     return HP;
 }
 
+string Character::thought() {
+    const int MAX = 7;
+    int random;
+    string thoughts[MAX] = {
+                             "I want to eat something delicious",
+                             "I am so tired of this"
+                             "The enemy was strong, I almost died"
+                             "I hope I will be lucky further"
+                             "I need to get better weapon as soon as possible"
+                             "I hope no one will attack during my rest"
+                             "The more I look at the bonfire the more I want to burn all these places"
+                            };
+
+    srand(time(0));
+
+    random = rand()%MAX;
+    string ans = thoughts[random];
+    return ans;
+}

@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 #include <string>
+#include <ctime>
 #include "Item.h"
 
 class Character {
@@ -19,6 +20,7 @@ public:
     int showEnemyHp(int enemyhp);
     int showHp(int enemyattack);
     int rest();
+    string thought();
 
     const Item &getItem() const;
 

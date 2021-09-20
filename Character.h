@@ -18,6 +18,7 @@ public:
     int showEnemyHp(int enemyhp);
     int showHp(int enemyattack);
 
+
     const Item &getItem() const;
 
     void setItem(const Item &item);

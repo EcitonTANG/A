@@ -31,7 +31,6 @@ void Character::levelUp(){
         level++;
         exp=0;
         maxHP = maxHP +5;
-        HP=maxHP;
         atk = atk+1;
     }
 }

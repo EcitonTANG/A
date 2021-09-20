@@ -77,7 +77,8 @@ void Game::exploreMenu(){
                 break;
             }
             case 2:
-                break;//TODO setHP to maxHP
+                character.rest();
+                cout<<"You have rested"<<endl;
             default:
                 break;
 

@@ -84,13 +84,13 @@ void Character::Battle()
 }
 
 void Character::enemyBattle() {
-    int enemyhp = 15, enemyattack = 5;
-    int hitGoblin;
+    int enemyhp = 15, enemyattack = 4;
+    int hitEnemy;
 
     do {
         cout << "\nHit enemy?\n Yes = 1\n No = 2\n";
-        cin >> hitGoblin;
-        if (hitGoblin == 1)
+        cin >> hitEnemy;
+        if (hitEnemy == 1)
         {
             enemyhp = showEnemyHp(enemyhp);
             HP = showHp(enemyattack);
@@ -106,7 +106,7 @@ void Character::enemyBattle() {
                 cout << "You now have " << HP << "HP left.\n\n";
             }
         }
-        else if(hitGoblin == 2)
+        else if(hitEnemy == 2)
         {
             HP = showHp(enemyattack);
             cout << "You chose not to hit the enemy so he hit you instead\n";
@@ -132,3 +132,9 @@ int Character::showHp(int enemyattack)
     HP = HP - enemyattack;
     return HP;
 }
+
+int Character::rest() {
+    HP = maxHP;
+    return HP;
+}
+

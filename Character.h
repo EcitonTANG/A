@@ -13,11 +13,12 @@ public:
     int getHP();
     int getAtk();
     string showStats();
+
     void Battle();
     void enemyBattle();
     int showEnemyHp(int enemyhp);
     int showHp(int enemyattack);
-
+    int rest();
 
     const Item &getItem() const;
 
@@ -32,8 +33,6 @@ private:
     int exp;
     int level;
     Item item;
-
-
 };
 
 

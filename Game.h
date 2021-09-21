@@ -2,7 +2,7 @@
 using namespace std;
 #include <string>
 #include "Character.h"
-//#include "Fight.h"
+#include <ctime>
 
 #ifndef IT_2003_2004_L1_GAME_H
 #define IT_2003_2004_L1_GAME_H

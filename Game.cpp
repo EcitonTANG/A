@@ -78,7 +78,7 @@ void Game::exploreMenu(){
             }
             case 2:
                 character.rest();
-                cout<<character.thought()<<endl;
+                character.thought();
             default:
                 break;
 
@@ -97,7 +97,14 @@ void Game::startGame(){
 
 void Game::getItem(){
     Item item;
-    character.setItem(*item.createItem("Sword",1));
+    const int IMAX = 3;
+    int random;
+    string itemR[IMAX] = {"Stick", "Sword", "Sledgehammer"};
+    srand(time(0));
+
+    random = rand()%IMAX;
+    string ans = itemR[random];
+    character.setItem(*item.createItem(ans,2));
 }
 
 void Game::showStats(){

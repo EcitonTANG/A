@@ -16,7 +16,6 @@ void Character::initialize(string name){
     atk = 5;
     exp = 0;
     level = 1;
-
 };
 
 void Character::gainExp(int expAdd){
@@ -52,8 +51,7 @@ int Character::getHP() {
 int Character::getAtk() {
     return atk;
 }
-//In your Inventory you can store only best 3 items (they must be automatically equipped).
-//more atk = better item
+
 const Item &Character::getItem() const {
     return item;
 }
@@ -138,7 +136,7 @@ int Character::rest() {
     return HP;
 }
 
-string Character::thought() {
+void Character::thought() {
     const int MAX = 7;
     int random;
     string thoughts[MAX] = {
@@ -155,5 +153,5 @@ string Character::thought() {
 
     random = rand()%MAX;
     string ans = thoughts[random];
-    return ans;
+    cout<<ans<<endl;
 }

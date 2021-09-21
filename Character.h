@@ -20,7 +20,7 @@ public:
     int showEnemyHp(int enemyhp);
     int showHp(int enemyattack);
     int rest();
-    string thought();
+    void thought();
 
     const Item &getItem() const;
 

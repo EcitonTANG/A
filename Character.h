@@ -8,24 +8,24 @@ using namespace std;
 
 class Character {
 public:
-    Character();
-    void initialize(string name);
-    void levelUp();
-    int getHP();
-    int getAtk();
-    string showStats();
+    Character(); //Constructor for the Character class
+    void initialize(string name); //The initialization function, it initializes the player
+    void levelUp(); //Raises the level of the hero.
+    int getHP(); //Returns the current health
+    int getAtk(); //Returns the current attack
+    string showStats(); //Returns the current characteristics
 
-    void Battle();
-    void enemyBattle();
-    int showEnemyHp(int enemyhp);
-    int showHp(int enemyattack);
-    int rest();
-    void thought();
+    void Battle(); //The battle function starts where the player chooses whether to attack the enemy or not
+    void enemyBattle(); //The battle function, here the battle itself unfolds
+    int showEnemyHp(int enemyhp); //The function of fixing the player's strike
+    int showHp(int enemyattack); //The function of fixing the enemy's strike
+    int rest(); //Rest function, make the HP variable level to MaxHP
+    void thought(); //This function gives out random thoughts of the player during the rest
 
-    const Item &getItem() const;
-
-    void setItem(const Item &item);
-    void gainExp(int exp);
+    const Item &getItem() const; //Adding experience to the current one
+    void setItem(const Item &item); //Changes the current weapon to a new one
+	
+    void gainExp(int exp); //Adding experience to the current one
 
 private:
     string name;

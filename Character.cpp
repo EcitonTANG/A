@@ -1,5 +1,6 @@
 #include "Character.h"
 
+//Constructor for the Character class
 Character::Character() {
     name = "Player";
     HP = 0;
@@ -9,8 +10,9 @@ Character::Character() {
     level = 0;
 }
 
+//The initialization function, it initializes the player
 void Character::initialize(string name){
-    this->name = name;//keyword "this", helps to override variables with same naming;
+    this->name = name;
     HP = 20;
     maxHP = 20;
     atk = 5;
@@ -18,14 +20,14 @@ void Character::initialize(string name){
     level = 1;
 };
 
+//Adding experience to the current one
 void Character::gainExp(int expAdd){
     exp = exp + expAdd;
-    //setExp(getExp()+expAdd);
     levelUp();
 }
 
+//Raises the level of the hero
 void Character::levelUp(){
-    //exp->level->add stats;
     while (exp >= level*10){
         level++;
         exp=0;
@@ -34,6 +36,7 @@ void Character::levelUp(){
     }
 }
 
+//Returns the current characteristics
 string Character::showStats(){
 
     string string1= "Name: "+name+"\n"+"HP: "+ to_string(HP)+"/"+ to_string(maxHP)+
@@ -44,26 +47,31 @@ string Character::showStats(){
 
 }
 
+//Returns the current health
 int Character::getHP() {
     return HP;
 }
 
+//Returns the current attack
 int Character::getAtk() {
     return atk;
 }
 
+//Returns the current item
 const Item &Character::getItem() const {
     return item;
 }
 
+//Changes the current weapon to a new one
 void Character::setItem(const Item &item) {
     Character::item = item;
 }
 
+//The battle function starts where the player chooses whether to attack the enemy or not
 void Character::Battle()
 {
     int battle;
-    cout << "\nYou see an enemy in the distance. Attack enemy?\n Yes = 1\n No = 2\n";
+    cout << "\nYou have stumbled upon an enemy from a distance. Attack the enemy?\n Yes = 1\n No = 2\n";
     cin >> battle;
     if(battle==1)
     {
@@ -75,12 +83,13 @@ void Character::Battle()
     }
     else
     {
-        cout << "That is not a valid choice.\n\n";
+        cout << "Error!! Not a valid choice.\n\n";
         return Battle();
     }
 
 }
 
+//The battle function, here the battle itself unfolds
 void Character::enemyBattle() {
     int enemyhp = 15, enemyattack = 4;
     int hitEnemy;
@@ -119,33 +128,37 @@ void Character::enemyBattle() {
     }while(HP > 0 && enemyhp > 0);
 }
 
+//The function of fixing the player's strike
 int Character::showEnemyHp(int enemyhp)
 {
     enemyhp = enemyhp - atk;
     return enemyhp;
 }
 
+//The function of fixing the enemy's strike
 int Character::showHp(int enemyattack)
 {
     HP = HP - enemyattack;
     return HP;
 }
 
+//Rest function, make the HP variable level to MaxHP
 int Character::rest() {
     HP = maxHP;
     return HP;
 }
 
+//This function gives out random thoughts of the player during the rest
 void Character::thought() {
     const int MAX = 7;
     int random;
     string thoughts[MAX] = {
                              "I want to eat something delicious",
-                             "I am so tired of this"
-                             "The enemy was strong, I almost died"
-                             "I hope I will be lucky further"
-                             "I need to get better weapon as soon as possible"
-                             "I hope no one will attack during my rest"
+                             "I am so tired of this",
+                             "The enemy was strong, I almost died",
+                             "I hope I will be lucky further",
+                             "I need to get better weapon as soon as possible",
+                             "I hope no one will attack during my rest",
                              "The more I look at the bonfire the more I want to burn all these places"
                             };
 

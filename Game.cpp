@@ -104,7 +104,7 @@ void Game::getItem(){
 
     random = rand()%IMAX;
     string ans = itemR[random];
-    character.setItem(*item.createItem(ans,2));
+    character.setItem(*item.createItem(ans,3));
 }
 
 void Game::showStats(){

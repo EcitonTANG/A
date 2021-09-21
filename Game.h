@@ -20,7 +20,6 @@ private:
     int option; //choice of player
     bool playing; //if player is playing game?
     Character character;
-    //Fight fight;
 
 
     void showStats();
